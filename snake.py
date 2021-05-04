@@ -153,7 +153,7 @@ while True:
     desenha_cobra(lista_cobra)
     x_comida, y_comida, lista_cobra = verifica_comida(dx, dy, x_comida, y_comida, lista_cobra)
 
-    if lacos == len(lista_cobra):
+    if lacos == 5:
         dx, dy, lista_cobra, move_direction = mover_cobra(dx, dy, lista_cobra, move_direction)
         verifica_parede(lista_cobra)
         verifica_mordeu_cobra(lista_cobra)
@@ -161,5 +161,5 @@ while True:
     atualizar_pontos(lista_cobra)
     conta_tempo(time.time())
     clock.tick(24)
-    lacos = (lacos + 1) % (15 - len(lista_cobra) + 1)
+    lacos = (lacos + 1) % 6
     print("Laço: " + str(lacos))
