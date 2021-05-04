@@ -53,21 +53,17 @@ def mover_cobra(dx, dy, lista_cobra, move_direction):
     for event in pygame.event.get():
         if event.type == pygame.KEYDOWN:
             if event.key == pygame.K_LEFT:
-                print('Moving from ' + str(move_direction))
                 if move_direction != 'R':
                     move_direction = 'L'
                     dx = -d
                     dy = 0
                 
-                print('Moving to ' + str(move_direction))
             
             elif event.key == pygame.K_RIGHT:
-                print('Moving tfrom ' + str(move_direction))
                 if move_direction != 'L':
                     move_direction = 'R'
                     dx = d
                     dy = 0
-                print('Moving to ' + str(move_direction))
             
             elif event.key == pygame.K_UP:
                 if move_direction != 'D':
@@ -162,4 +158,3 @@ while True:
     conta_tempo(time.time())
     clock.tick(24)
     lacos = (lacos + 1) % 6
-    print("Laço: " + str(lacos))
